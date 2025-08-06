@@ -1,0 +1,171 @@
+git init
+--------------
+it is used to create a empty git repo in local machine (your pc)  by default it use master branch
+
+git init -b main
+------------
+it is used to change the branch to main instead of master 
+
+
+git add [file name]
+------------------
+it is used to push the  file  to staging area(it is present between my working folder and local repository)
+
+
+git add .
+------------
+add all the files to the staging area
+	
+
+git status
+---------
+it is used to see the status of the file in local repo
+
+git commit
+---------------
+it moves the file from staging area to local repo
+
+git commit -a
+==============
+it is used to perform both git add and commit
+
+git commit -m " write your message"
+
+git push
+-------------
+to push file from local repo to remote repo
+
+git pull
+------------
+to get file from remote repo to our working directory
+
+git fetch
+---------
+to get file from remote repo to our local repo
+
+
+git log(gives the history of commit)
+---------
+
+git diff
+----------
+shows what is the code or text modified  -- use when file is present in my working directory
+
+git diff --staged
+--------------------
+when file is present in staging area
+
+
+git rm --cached [filename]
+----------------------------
+will remove the file from staging area
+ 
+s1
+----
+if the file in local repo 
+use the above command and use the commit command to remove from local repo
+
+if the file in remote repo
+use the s1 steps and use git push command to remove from remote repo
+
+git branch -m old-branch-name new-branch-name
+-----------------------------------------------
+to rename the branch
+
+git remote add origin [https://github.com/username/repo-name.git]
+-----------------------
+to make connection between local and remote repo 
+orgin - is the alias name and can be anything 
+
+
+
+git push [repo name can be anything but should be same as the name mentioned in the  previous command name][branch name]
+--------------------------------------------
+but when you use like that you 
+need to use every time the git push file name and branch name
+
+git push -u [repo name][branch name]
+--------------------------------------
+-u tells the  upstream that whenever I use [repo name ] [file name]  it will push or pull from the particular repo and particular branch 
+so you can only use  git push and git pull instead of doing every steps in the previous command
+
+
+1. Deleting a Branch
+
+
+git branch -d <branch_name>
+---------------------------  To delete a local branch:
+
+
+git branch -D <branch_name>    To force delete a branch
+-----------------------------    
+
+git remote -v
+----------------
+to see the  where the local repo is poiting in the remote repo
+
+git remove [repo name]
+------------------------
+to remove the path from local to remote repo
+
+
+
+================================================
+git branch [branch name]
+=---------------------------
+to create a new branch
+in local repo
+
+git branch [branch name] or git checkout -b [branch name]
+-------------
+shows the  current working brach
+
+ 
+git checkout [branch name] or git switch [branch name]
+--------------
+to navigate to ne branch
+create a new branch if not created
+
+
+
+git checkout -b [branch name]
+------------------------
+create and navigate to the branch
+
+git branch -d [branch name]
+-----------------------
+to delete a branch
+
+
+git merge [from branch] [to branch]
+-----------------------------
+to merge both files 
+The commit history of all branches involved in the merge will be preserved.
+
+git rebase [from branch] [to branch]      (https://youtu.be/z3HRPSw5nm0?si=BrFjYXrd6JGdUHCc)
+-----------------------------------
+rebase also perfrom merge operation but the history of commits is linear and clear
+
+used to merge sequence of commits of two branches
+
+git chery-pick [comit id]
+----------------------------
+it is used to merge particular commit from one branch to another 
+
+git stash
+----------
+is used to hide the file in a separate memory .
+for that the file should be in staging area 
+
+
+git stash pop
+------------
+it is used to remove the file from the  separate  memory
+
+git stash list 
+-------------
+it shows the history of files stashed 
+
+
+
+
